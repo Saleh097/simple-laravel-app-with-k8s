@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-lara
+  labels:
+    app: simple-lara
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: simple-lara
+  template:
+    metadata:
+      labels:
+        app: simple-lara
+    spec:
+      containers:
+        - name: simple-lara
+          image: saleh097/simple-lara
+          ports:
+            - containerPort: 8000
+          # volumeMounts:
+          #   - name: laravel-storage
+          #     mountPath: /var/www/html/storage
+      # volumes:
+      #   - name: laravel-storage
+      #     emptyDir: {}

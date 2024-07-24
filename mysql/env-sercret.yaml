@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysql-secret
+type: Opaque
+data:
+  MYSQL_ROOT_PASSWORD: YWFhYXNzc3M=  # base64 encoded value of 'aaaassss'
+  MYSQL_DATABASE: bGFyYXZlbA==      # base64 encoded value of 'laravel'
+  MYSQL_USER: ZHVt                    # base64 encoded value of 'dum'
+  MYSQL_PASSWORD: YWFhYWFhYWE=   # base64 encoded value of 'aaaaaaaa'
