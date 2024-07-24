@@ -14,7 +14,8 @@ RUN apt-get update \
         unzip \
         libpng-dev \
         curl \
-        vim 
+        vim \
+        iputils-ping
 
 # Install pcntl extension
 RUN apt-get update && apt-get install -y \
