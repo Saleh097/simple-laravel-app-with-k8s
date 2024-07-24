@@ -39,6 +39,9 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # Copy application files
 COPY ./simple-lara /var/www/html
 
+# Copy env file
+COPY .env ./var/www/html
+
 # Set working directory
 WORKDIR /var/www/html
 
