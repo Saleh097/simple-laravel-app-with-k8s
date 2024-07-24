@@ -56,4 +56,4 @@ RUN chown -R www-data:www-data /var/www/html/public
 
 # Expose port 8000 and start php-fpm server
 EXPOSE 8000
-CMD php artisan storage:link;php artisan key:generate;php artisan migrate;php artisan serve --port=8000
+CMD php artisan storage:link;php artisan key:generate;php artisan migrate;php artisan db:seed;php artisan serve --port=8000
