@@ -22,6 +22,10 @@ spec:
         ports:
         - containerPort: 3306
           name: mysql
+        lifecycle:
+          postStart:
+            exec:
+              command: ['sh', '-c', 'echo command executed']
         volumeMounts:
         - name: mysql-persistent-storage
           mountPath: /var/lib/mysql
